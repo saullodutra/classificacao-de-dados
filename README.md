@@ -1,2 +1,2 @@
-# Classifica-o-de-dados
+# Classificacao-de-dados
 Repositório para organização e apresentações de trabalhos
