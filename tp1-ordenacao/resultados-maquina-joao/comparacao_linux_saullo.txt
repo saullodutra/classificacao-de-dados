@@ -1,0 +1,63 @@
+=== 1. Expoente empírico b (ordem aleatória) ===
+    impl algoritmo  expoente_saullo  expoente_joao  diferenca
+generico    Bubble            2.191          2.505      0.314
+generico Insertion            2.317          2.445      0.128
+generico Selection            2.224          2.006     -0.218
+generico     Shell            1.303          1.265     -0.038
+generico      Heap            1.310          1.194     -0.116
+generico     Merge            1.219          1.135     -0.084
+generico     Quick            1.178          1.114     -0.064
+     int    Bubble            2.461          2.488      0.027
+     int Insertion            2.012          1.998     -0.014
+     int Selection            2.024          1.991     -0.033
+     int     Shell            1.158          1.121     -0.037
+     int      Heap            1.240          1.145     -0.095
+     int     Merge            1.090          1.054     -0.036
+     int     Quick            1.071          1.041     -0.030
+     int  Counting            1.458          1.349     -0.109
+     int     Radix            1.105          1.068     -0.037
+     int    Bucket            1.325          1.277     -0.048
+
+=== 2. Razão das medianas (João / Saullo) ===
+mediana geral: 0.81x  (faixa: 0.11x a 1.69x)
+impl      config     
+generico  aleatorio      0.78
+          crescente      0.70
+          decrescente    0.59
+int       aleatorio      0.83
+          crescente      0.83
+          decrescente    0.79
+
+=== 3. Ranking dos algoritmos (mais rápido -> mais lento) ===
+generico  aleatorio   n=1000      Saullo: Quick < Heap < Shell < Merge < Insertion < Selection < Bubble
+                                 João:   Quick < Heap < Merge < Shell < Insertion < Selection < Bubble
+generico  aleatorio   n=5000      Saullo: Selection < Insertion < Bubble
+                                 João:   Insertion < Selection < Bubble
+generico  aleatorio   n=10000     Saullo: Quick < Merge < Heap < Shell < Selection < Insertion < Bubble
+                                 João:   Quick < Merge < Heap < Shell < Insertion < Selection < Bubble
+generico  aleatorio   n=50000     Saullo: Selection < Insertion < Bubble
+                                 João:   Insertion < Selection < Bubble
+generico  decrescente n=10000     Saullo: Quick < Shell < Heap < Merge < Selection < Insertion < Bubble
+                                 João:   Quick < Shell < Merge < Heap < Insertion < Selection < Bubble
+generico  decrescente n=50000     Saullo: Selection < Insertion < Bubble
+                                 João:   Insertion < Selection < Bubble
+int       aleatorio   n=1000      Saullo: Counting < Bucket < Radix < Heap < Shell < Quick < Merge < Insertion < Selection < Bubble
+                                 João:   Counting < Bucket < Quick < Heap < Radix < Merge < Shell < Insertion < Selection < Bubble
+int       aleatorio   n=10000     Saullo: Counting < Bucket < Radix < Heap < Quick < Shell < Merge < Insertion < Selection < Bubble
+                                 João:   Counting < Bucket < Radix < Quick < Heap < Shell < Merge < Insertion < Selection < Bubble
+int       aleatorio   n=100000    Saullo: Counting < Bucket < Radix < Quick < Merge < Heap < Shell < Insertion < Selection < Bubble
+                                 João:   Counting < Bucket < Radix < Quick < Heap < Merge < Shell < Insertion < Selection < Bubble
+int       aleatorio   n=1000000   Saullo: Counting < Bucket < Radix < Quick < Merge < Heap < Shell
+                                 João:   Counting < Bucket < Radix < Quick < Heap < Merge < Shell
+int       aleatorio   n=10000000  Saullo: Radix < Counting < Quick < Bucket < Merge < Shell < Heap
+                                 João:   Counting < Radix < Bucket < Quick < Merge < Shell < Heap
+int       crescente   n=10000     Saullo: Bubble < Insertion < Shell < Counting < Bucket < Quick < Merge < Radix < Heap < Selection
+                                 João:   Bubble < Insertion < Counting < Shell < Bucket < Quick < Merge < Radix < Heap < Selection
+int       crescente   n=50000     Saullo: Insertion < Bubble < Selection
+                                 João:   Bubble < Insertion < Selection
+int       crescente   n=1000000   Saullo: Shell < Counting < Bucket < Quick < Merge < Radix < Heap
+                                 João:   Counting < Shell < Bucket < Quick < Merge < Heap < Radix
+int       decrescente n=1000000   Saullo: Counting < Bucket < Shell < Quick < Merge < Heap < Radix
+                                 João:   Counting < Bucket < Shell < Quick < Merge < Radix < Heap
+
+Mesmo ranking em 10 de 25 configurações.

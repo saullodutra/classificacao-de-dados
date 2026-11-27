@@ -1,0 +1,19 @@
+\begin{table}[htbp]\centering\small
+\caption{Expoente empírico $b$ do ajuste $t \approx c\,n^b$ (ordem aleatória, $n \ge 10^4$)}\label{tab:expoentes}
+\begin{tabular}{llrrr}
+\toprule
+Algoritmo & Complexidade (médio) & $b$ genérico & $b$ \texttt{int} & Faixa de $n$ (\texttt{int}) \\
+\midrule
+Bubble & $\Theta(n^2)$ & 2,19 & 2,46 & $10^{4}$--$10^{5}$ \\
+Insertion & $\Theta(n^2)$ & 2,32 & 2,01 & $10^{4}$--$10^{5}$ \\
+Selection & $\Theta(n^2)$ & 2,22 & 2,02 & $10^{4}$--$10^{5}$ \\
+Shell & $\approx O(n^{3/2})$ & 1,30 & 1,16 & $10^{4}$--$10^{7}$ \\
+Heap & $\Theta(n\log n)$ & 1,31 & 1,24 & $10^{4}$--$10^{7}$ \\
+Merge & $\Theta(n\log n)$ & 1,22 & 1,09 & $10^{4}$--$10^{7}$ \\
+Quick & $\Theta(n\log n)$ & 1,18 & 1,07 & $10^{4}$--$10^{7}$ \\
+Counting & $\Theta(n+k)$ & -- & 1,46 & $10^{4}$--$10^{7}$ \\
+Radix & $\Theta(d(n+b))$ & -- & 1,11 & $10^{4}$--$10^{7}$ \\
+Bucket & $\Theta(n)$ & -- & 1,32 & $10^{4}$--$10^{7}$ \\
+\bottomrule
+\end{tabular}
+\end{table}

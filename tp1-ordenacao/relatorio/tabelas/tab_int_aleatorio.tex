@@ -1,0 +1,20 @@
+\begin{table}[htbp]\centering\small
+\caption{Tempo médio (ms) — implementação \texttt{int[]}, ordem aleatória}\label{tab:int-aleat}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Algoritmo & 1.000 & 5.000 & 10.000 & 50.000 & 100.000 & 1.000.000 & 10.000.000 \\
+\midrule
+Bubble & 0,562 & 9,04 & 35,4 & 2.158 & 9.845 & -- & -- \\
+Insertion & 0,091 & 1,60 & 5,81 & 144 & 596 & -- & -- \\
+Selection & 0,253 & 4,44 & 16,5 & 423 & 1.780 & -- & -- \\
+Shell & 0,051 & -- & 0,691 & -- & 8,48 & 121 & 1.756 \\
+Heap & 0,046 & -- & 0,553 & -- & 7,30 & 106 & 3.026 \\
+Merge & 0,076 & -- & 0,683 & -- & 7,39 & 90,6 & 1.103 \\
+Quick & 0,063 & -- & 0,642 & -- & 6,92 & 80,6 & 906 \\
+Counting & 0,014 & -- & 0,046 & -- & 0,523 & 21,7 & 920 \\
+Radix & 0,039 & -- & 0,331 & -- & 3,50 & 47,7 & 593 \\
+Bucket & 0,024 & -- & 0,117 & -- & 1,18 & 34,2 & 942 \\
+\bottomrule
+\end{tabular}
+\end{table}
